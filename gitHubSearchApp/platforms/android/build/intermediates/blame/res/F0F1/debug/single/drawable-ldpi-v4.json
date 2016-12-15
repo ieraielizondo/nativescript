@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-ldpi-v4/icon.png",
+        "source": "/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/src/main/res/drawable-ldpi/icon.png"
+    },
+    {
+        "merged": "/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-ldpi-v4/logo.png",
+        "source": "/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/src/main/res/drawable-ldpi/logo.png"
+    },
+    {
+        "merged": "/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-ldpi-v4/background.png",
+        "source": "/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/src/main/res/drawable-ldpi/background.png"
+    }
+]

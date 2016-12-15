@@ -1,0 +1,50 @@
+<TabView [(ngModel)]="tabSelectedIndex" selectedColor="#3380cc">
+    <ScrollView *tabItem="{title: 'Profile', iconSource: '~/icon.png'}">
+        <StackLayout>
+            <StackLayout class="form">
+                <StackLayout class="input-field">
+                    <Label class="label" text="Search username"></Label>
+                    <TextField class="input" hint="Enter username" [(ngModel)]="username"></TextField>
+                    <Button (tap)="findUsers()" text="Search"></Button>
+                </StackLayout>
+            </StackLayout>
+            <Label class="label" [text]="log1"></Label>
+            <CardView class="card" (tap)="prueba(user)" *ngFor="let user of foundUsers" shadowColor="#FE00FC" elevation="10" padding="10"
+                margin="10">
+                <GridLayout class="container" rows="auto,auto">
+                    <GridLayout row="0" columns="auto,auto" class="add-bar">
+                        <Image class="profile-img" src="{{user.avatar_url}}" col="0"></Image>
+                        <GridLayout rows="auto,auto" col="1">
+                            <Label class="name" row="0" text="{{user.name}}"></Label>
+                            <Label class="login" row="1" text="@{{user.login}}"></Label>
+                        </GridLayout>
+                    </GridLayout>
+                </GridLayout>
+            </CardView>
+        </StackLayout>
+    </ScrollView>
+    <StackLayout *tabItem="{title: 'Bars'}">
+        <Button (tap)="getBars()" text="get bars"></Button>
+        <ScrollView>
+            <StackLayout>
+                <CardView *ngFor="let bar of bars" shadowColor="#FE00FC" elevation="10" padding="10" margin="10">
+                    <GridLayout class="container" rows="auto,auto">
+                        <GridLayout row="0" columns="auto,*" class="add-bar">
+                            <Image class="profile-img" src="{{bar.img}}" col="0"></Image>
+                            <GridLayout class="info-container" rows="auto,auto,*" col="1">
+                                <Label class="name" row="0" text="{{bar.name}}"></Label>
+                                <Label row="1" text="Dirección: {{bar.street}}"></Label>
+                                <Label row="2" text="Latitud: {{bar.lat}} Long: {{bar.long}}"></Label>
+                            </GridLayout>
+                        </GridLayout>
+                    </GridLayout>
+                </CardView>
+                <ActivityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'" row="1" horizontalAlignment="center"
+                    verticalAlignment="center"></ActivityIndicator>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Settings'}">
+        <Label text="Third tab item"></Label>
+    </StackLayout>
+</TabView>

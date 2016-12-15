@@ -1,0 +1,1 @@
+/home/ierai/Escritorio/nativescript/gitHubSearchApp/platforms/android/src/main/assets/app/pages/home/home.component.js
